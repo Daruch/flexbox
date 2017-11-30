@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>flexbox</title>
+	<style type="text/css">
+		
+	.container{
+		max-width:100%;
+		display: flex;
+		flex-flow: column nowrap;
+		min-height: 100vh;
+		background-color: #ccc;
+	}
+	.header{
+		background-color: #00aeff;
+		max-width:100%;
+		height:90px;
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+
+  }
+  .leftbox{
+   background-color: #009bDD;
+   width: 200px;
+   height: 40px;
+ }
+ .rightbox{
+  background-color:#36C3FF;
+  width:200px;
+  height: 40px;
+
+}
+
+	/*.logo{
+		background-color: red;
+		width:200px;
+
+	}
+
+	.logo1{
+		background-color: orange;
+		width: 300px
+	}*/
+
+	.content{
+    width:65%;
+		background-color: white;
+		display:flex;
+    justify-content:center;
+    flex:1 0 auto;
+    margin:0 auto;
+		/*flex: 2 2;/* flex-grow/ flex-shrink/ flex basic*/
+	}
+
+	.sidebar {
+    width:180px;
+    height: 100vh;
+		background-color: #ff5607;  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+  }
+
+  .sidebox{
+    width: 140px;
+    height: 30px;
+    margin-top: 10px;
+    background-color: #e84900;
+    display:0;
+  }
+
+  .main-content{
+    background-color: #ccc;
+    flex: 1 0 auto;
+    margin: 15px 20px 10px 5px;
+    display: flex;
+    flex-direction: column;
+
+   /* justify-content: flex-start;*/
+
+
+  }
+
+  .yellowbox{
+     background-color:#FFbD00;
+     width: 40%;
+     height: 200px;
+ }
+    
+ .content-box{
+    background-color: #fff;
+    width: 90%;
+    height: 20px;
+    align-self: center;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+
+  /*.content-box{
+    background-color: #fff;
+    width: 500px;
+    height: 30px;
+    margin-bottom:10px;
+    margin-right:10px;
+    align-self: flex-end;
+    flex: auto;*/
+    
+
+    
+  }
+
+  .footer{
+    max-width: 100%;
+    background-color:#00D169;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+
+  }
+  .box{
+    background-color:#02B15A;    
+    width:130px;
+    height:180px;
+    margin:10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .fbox{
+    background-color: #038042;
+    width:110px; 
+    height:18px;
+    margin:0 3px 12px 3px;
+    flex:0;
+  }
+</style>
+
+</head>
+<body>
+
+<div class="container">
+	<!--header!-->
+  <header class="header">
+    <div class="leftbox"></div>
+    <div class="rightbox"></div>
+  </header>
+
+<!--content class start!-->
+<div class="content">
+    
+   <aside class="sidebar">
+       <div class="sidebox"></div>
+       <div class="sidebox"></div>
+       <div class="sidebox"></div>
+       <div class="sidebox"></div>
+       <div class="sidebox"></div>
+   </aside>
+
+   <article class="main-content">
+    <div class="yellowbox"></div>
+    <div class="content-box"></div>
+    <div class="content-box"></div>
+    <div class="content-box"></div>
+    <div class="content-box"></div>
+    <div class="content-box"></div>
+    <div class="content-box"></div>
+    <div class="content-box"></div>
+    <div class="content-box"></div>
+    <div class="content-box"></div>
+    <div class="content-box"></div>
+    <div class="content-box"></div>
+    <div class="content-box"></div>
+    <div class="content-box"></div>
+    <div class="content-box"></div>
+    <div class="content-box"></div>
+    <div class="content-box"></div>
+    <div class="content-box"></div>
+    <div class="content-box"></div>
+  </article>
+</div>
+<!-- content class end !-->
+
+<!--footer start!-->
+
+<footer class="footer">
+
+ 
+   
+  <div class ="box">
+    <div class="fbox">box</div>
+    <div class="fbox">box</div>
+    <div class="fbox">box</div>
+    <div class="fbox">box</div>
+  </div>
+
+  <div class="box">
+   <div class="fbox">box</div>
+    <div class="fbox">box</div>
+    <div class="fbox">box</div>
+    <div class="fbox">box</div>
+  </div>
+
+  <div class="box">
+   <div class="fbox">box</div>
+    <div class="fbox">box</div>
+    <div class="fbox">box</div>
+    <div class="fbox">box</div>
+ </div>
+
+ <div class="box">
+   <div class="fbox">box</div>
+    <div class="fbox">box</div>
+    <div class="fbox">box</div>
+    <div class="fbox">box</div>
+ </div>
+
+
+</div>
+
+</footer>   
+<!-- footer end!-->
+
+</div>   
+
+
+
+
+
+
+</body>
+</html>
