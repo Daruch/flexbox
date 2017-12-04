@@ -1,14 +1,15 @@
+
 *{
   margin:0;
   padding:0;
 }
 
 .container{
-  width:100%;
+  max-width:1920px;
   display: flex;
   flex-flow: column nowrap;
-  min-height: 100vh;
-  background-color: #ccc;
+  /* min-height: 100vh;*/
+  background-color: #fff;
 }
 .header{
   background-color: #00aeff;
@@ -21,18 +22,18 @@
 }
 .leftbox{
  background-color: #009bDD;
- width:30%;
+ width:20%;
  height:70px;
 
 }
 .rightbox{
   background-color:#36C3FF;
-  width:30%;
+  width:20%;
   height:70px;
 
 }
 .content{
-  width:100%;
+  width:70%;
   background-color: white;
   display:flex;
   justify-content:center;
@@ -41,13 +42,12 @@
 }
 
 .sidebar {
-  width:20%;
-  height: 100vh;
+  width:25%;
+  height: 120vh;
   background-color: #ff5607;  
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* flex:1;*/
 }
 
 .sidebox{
@@ -59,8 +59,7 @@
 
 .main-content{
   background-color: #ccc;
-  width: 80%;
-  /* flex:3;*/
+  width: 75%;
   margin: 15px 20px 10px 5px;
   display:flex;
   flex-direction:row;
@@ -68,18 +67,18 @@
 }
 .yellowbox{
   background-color:yellow;
-  height:220px;
-  width:15%;
-  /*height:200px;
-  width:25%;*/
+  height:230px;
+  width:18%;
   position:absolute;
-  margin:1% 2% 1% 1%;
+  margin-top: 1%;
+  margin-left: 1%;
   flex:1;
   align-self:flex-start;
 }
 
 .boxes{
   background-color: #fff;
+  width: 80%;
   display: flex;
   flex:2;
   flex-direction: row;
@@ -116,19 +115,16 @@
 .box{
   background-color:#02B15A;    
   width:170px;
-  height:180px;/*here was size in px*/
+  height:180px;
   margin:10px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-    /*flex-direction:row;
-    flex-wrap: wrap;
-   /* justify-content: center;
-   align-items: center;*/
- }
 
- .fbox{
+}
+
+.fbox{
   display:flex;
   background-color: #038042;
   width:75%; 
@@ -137,45 +133,43 @@
 }
 
 
-@media screen and (max-width: 1920px) {
+@media screen and (max-width: 1280px){
+
  .content{
-  width: 65%;
+   width: 100%;
+ }
+
+ .yellowbox{
+   background-color:yellow;
+   height:200px;
+   width:24%;
+   position:absolute;
+   margin-left: 1.5%;
+   flex:1;
+   align-self:flex-start;
+ }
+
+ .header{
+  background-color: #00aeff;
+  width:100%;
+  height:120px;
+  display:flex;
+  justify-content: space-around;
+  flex-direction: row;
 }
 
 .leftbox{
  background-color: #009bDD;
- width:20%;
+ width:30%;
  height:70px;
 
 }
 .rightbox{
   background-color:#36C3FF;
-  width:20%;
+  width:30%;
   height:70px;
 }
-.yellowbox{
-  background-color:yellow;
-  height:220px;
-  width:15%;
-  /*height:200px;
-  width:25%;*/
-  position:absolute;
-  margin:1% 2% 1% 1%;
-  flex:1;
-  align-self:flex-start;
 }
-
-}
-
-
-@media screeen and (max-width: 1240px){
-  .content{
-    width: 100%;
-  }
-
-  
-}
-
 
 
 @media screen and (max-width:375px){
@@ -184,12 +178,11 @@
     width:100%;
     display: flex;
     flex-flow: column;
-    background-color: #ccc;
+    background-color: #fff;
   }
 
-
   .header{
-   background-color: blue;
+   background-color:#00aeff;
    display:flex;
    justify-content: space-around;
    flex-direction: column;
@@ -200,9 +193,8 @@
    background-color: #009bDD;
    width:90%;
    height:43px;
-   
-   
  }
+
  .rightbox{
   background-color:#36C3FF;
   width:90%;
@@ -248,13 +240,11 @@
   display:flex;
   flex-direction:column;
 
-
-  /*align-items: stretch;*/
 }
 
 .yellowbox{
   background-color:yellow;
-  height:210px;
+  height:200px;
   width:100%;
   position:static;
   
@@ -267,13 +257,13 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
-  align-items: flex-end;
+  align-items: center;
 
 }
 
 .b{
   background-color: #cecece;
-  width: 98%;
+  width: 100%;
   height: 20px;
   margin-top:15px;
 }
@@ -290,8 +280,7 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-   /* justify-content:center;
-   align-items: center;*/
+   
  }
 
  .box{
@@ -302,15 +291,9 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-    /*align-items: center;
-    justify-content: center;/*
-    /*flex-direction:row;
-    flex-wrap: wrap;
-   /* justify-content: center;
-   align-items: center;*/
+    
  }
  .fbox{
-  /*display:flex;*/
   background-color: #038042;
   width:65%; 
   height:20px;
@@ -321,7 +304,5 @@
 .fbox:nth-child(n+2){
   display: none;
 }
-
-
 
 }
