@@ -3,9 +3,15 @@
 <head>
 	<title>flexbox</title>
 	<style type="text/css">
+
+
+  *{
+    margin:0;
+    padding:0;
+  }
 		
 	.container{
-		max-width:100%;
+		width:100%;
 		display: flex;
 		flex-flow: column nowrap;
 		min-height: 100vh;
@@ -13,130 +19,317 @@
 	}
 	.header{
 		background-color: #00aeff;
-		max-width:100%;
-		height:90px;
+		width:100%;
+		height:120px;
     display:flex;
     justify-content: space-around;
+    flex-direction: row;
     align-items: center;
-
-  }
+}
   .leftbox{
    background-color: #009bDD;
-   width: 200px;
-   height: 40px;
+   width:30%;
+   height:70px;
+   
  }
  .rightbox{
   background-color:#36C3FF;
-  width:200px;
-  height: 40px;
+  width:30%;
+  height:70px;
 
 }
+.content{
+  width:100%;
+  background-color: white;
+  display:flex;
+  justify-content:center;
+  flex:1;
+  margin:0 auto;
+}
 
-	/*.logo{
-		background-color: red;
-		width:200px;
-
-	}
-
-	.logo1{
-		background-color: orange;
-		width: 300px
-	}*/
-
-	.content{
-    width:65%;
-		background-color: white;
-		display:flex;
-    justify-content:center;
-    flex:1 0 auto;
-    margin:0 auto;
-		/*flex: 2 2;/* flex-grow/ flex-shrink/ flex basic*/
-	}
-
-	.sidebar {
-    width:180px;
-    height: 100vh;
-		background-color: #ff5607;  
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    
+.sidebar {
+  width:20%;
+  height: 100vh;
+  background-color: #ff5607;  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ /* flex:1;*/
   }
 
-  .sidebox{
-    width: 140px;
+.sidebox{
+    width: 60%;
     height: 30px;
     margin-top: 10px;
     background-color: #e84900;
-    display:0;
-  }
+   }
 
-  .main-content{
+.main-content{
     background-color: #ccc;
-    flex: 1 0 auto;
+    width: 80%;
+   /* flex:3;*/
     margin: 15px 20px 10px 5px;
-    display: flex;
-    flex-direction: column;
-
-   /* justify-content: flex-start;*/
-
-
-  }
-
-  .yellowbox{
-     background-color:#FFbD00;
-     width: 40%;
-     height: 200px;
+    display:flex;
+    flex-direction:row;
+    align-items: stretch;
  }
-    
- .content-box{
-    background-color: #fff;
-    width: 90%;
-    height: 20px;
-    align-self: center;
-    margin-top: 5px;
-    margin-bottom: 10px;
-    margin-left: 10px;
+.yellowbox{
+  background-color:yellow;
+  height:220px;
+  width:15%;
+  /*height:200px;
+  width:25%;*/
+  position:absolute;
+  margin:1% 2% 1% 1%;
+  flex:1;
+  align-self:flex-start;
+ }
 
-  /*.content-box{
-    background-color: #fff;
-    width: 500px;
-    height: 30px;
-    margin-bottom:10px;
-    margin-right:10px;
-    align-self: flex-end;
-    flex: auto;*/
-    
+.boxes{
+  background-color: #fff;
+  display: flex;
+  flex:2;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content:flex-end;
+}
 
-    
-  }
+.b{
+  background-color: #cecece;
+  width: 98%;
+  height: 25px;
+  margin-top: 10px;
+  align-self: center;
+  margin-right: 5px;
 
-  .footer{
-    max-width: 100%;
+}
+.b:first-child{
+  background-color:#9d9d9d;
+  height: 30px;
+}
+.b:nth-child(-n+6){
+  background-color:#cecece;
+  width:60%;
+  align-self: flex-end;
+  
+}
+
+.footer{
+    width: 100%;
     background-color:#00D169;
     display: flex;
     justify-content:center;
     align-items: center;
-
-  }
-  .box{
+ }
+.box{
     background-color:#02B15A;    
-    width:130px;
-    height:180px;
+    width:170px;
+    height:180px;/*here was size in px*/
     margin:10px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    /*flex-direction:row;
+    flex-wrap: wrap;
+   /* justify-content: center;
+    align-items: center;*/
   }
 
   .fbox{
+    display:flex;
     background-color: #038042;
-    width:110px; 
-    height:18px;
-    margin:0 3px 12px 3px;
-    flex:0;
+    width:75%; 
+    margin:10px 0px 5px 0px;
+    flex:1;
   }
+
+
+  @media screen and (max-width: 1920px) {
+   .content{
+    width: 65%;
+  }
+
+  .leftbox{
+   background-color: #009bDD;
+   width:15%;
+   height:70px;
+   
+ }
+ .rightbox{
+  background-color:#36C3FF;
+  width:15%;
+  height:70px;
+
+}
+
+
+
+  .yellowbox{
+    background-color:yellow;
+    height:220px;
+    width:15%;
+  /*height:200px;
+  width:25%;*/
+  position:absolute;
+  margin:1% 2% 1% 1%;
+  flex:1;
+  align-self:flex-start;
+}
+}
+
+   
+  
+@media screen and (max-width:375px){
+
+  .container{
+    width:100%;
+    display: flex;
+    flex-flow: column;
+    background-color: #ccc;
+  }
+
+
+ .header{
+   background-color: blue;
+   display:flex;
+   justify-content: space-around;
+   flex-direction: column;
+   align-items: center;
+ }
+
+ .leftbox{
+   background-color: #009bDD;
+   width:90%;
+   height:43px;
+   
+   
+ }
+ .rightbox{
+  background-color:#36C3FF;
+  width:90%;
+  height:43px;
+
+}
+
+.content{
+  width:100%;
+  background-color: white;
+  display:flex;
+  justify-content:center;
+  flex-direction: column;
+  flex:1;
+  
+}
+
+.sidebar {
+  width:100%;
+  height:70px;
+  background-color: #ff5607;  
+  display: flex;
+  flex-direction:row;
+  justify-content: space-around;
+  align-items: center;
+  
+}
+
+.sidebox{
+  width: 30%;
+  height: 30px;
+  margin-left:1%;
+  background-color: #e84900;
+}
+
+.sidebox:nth-child(n+4){
+  display: none;
+}
+ 
+ .main-content{
+    background-color: #fff;
+    width: 100%;
+    display:flex;
+    flex-direction:column;
+
+   
+    /*align-items: stretch;*/
+ }
+
+ .yellowbox{
+  background-color:yellow;
+  height:210px;
+  width:100%;
+  position:static;
+  
+ }
+
+ .boxes{
+  background-color: #fff;
+  display: flex;
+  flex:1;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: flex-end;
+
+}
+
+.b{
+  background-color: #cecece;
+  width: 98%;
+  height: 20px;
+  margin-top:15px;
+}
+
+.b:nth-child(-n+6){
+  background-color:#cecece;
+  width:100%;
+  
+}
+
+.footer{
+    width: 100%;
+    background-color:#00D169;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+   /* justify-content:center;
+    align-items: center;*/
+ }
+
+ .box{
+  background-color:#02B15A;    
+  width:90%;
+  height: auto;
+  margin:10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+    /*align-items: center;
+    justify-content: center;/*
+    /*flex-direction:row;
+    flex-wrap: wrap;
+   /* justify-content: center;
+   align-items: center;*/
+ }
+ .fbox{
+  /*display:flex;*/
+  background-color: #038042;
+  width:65%; 
+  height:20px;
+  margin-left:2%;
+  margin-bottom:3%;   
+}
+
+.fbox:nth-child(n+2){
+  display: none;
+}
+
+
+
+ }
+
+  
+
 </style>
 
 </head>
@@ -151,36 +344,40 @@
 
 <!--content class start!-->
 <div class="content">
-    
-   <aside class="sidebar">
-       <div class="sidebox"></div>
-       <div class="sidebox"></div>
-       <div class="sidebox"></div>
-       <div class="sidebox"></div>
-       <div class="sidebox"></div>
-   </aside>
 
-   <article class="main-content">
-    <div class="yellowbox"></div>
-    <div class="content-box"></div>
-    <div class="content-box"></div>
-    <div class="content-box"></div>
-    <div class="content-box"></div>
-    <div class="content-box"></div>
-    <div class="content-box"></div>
-    <div class="content-box"></div>
-    <div class="content-box"></div>
-    <div class="content-box"></div>
-    <div class="content-box"></div>
-    <div class="content-box"></div>
-    <div class="content-box"></div>
-    <div class="content-box"></div>
-    <div class="content-box"></div>
-    <div class="content-box"></div>
-    <div class="content-box"></div>
-    <div class="content-box"></div>
-    <div class="content-box"></div>
-  </article>
+ <aside class="sidebar">
+   <div class="sidebox"></div>
+   <div class="sidebox"></div>
+   <div class="sidebox"></div>
+   <div class="sidebox"></div>
+   <div class="sidebox"></div>
+ </aside>
+
+ <article class="main-content">
+   <div class= "yellowbox"></div>  
+   <div class="boxes"> 
+     
+      <div class="b"></div>
+      <div class="b"></div>
+      <div class="b"></div>
+      <div class="b"></div>
+      <div class="b"></div>
+      <div class="b"></div>
+      <div class="b"></div>
+      <div class="b"></div>
+      <div class="b"></div>
+      <div class="b"></div>
+      <div class="b"></div>
+      <div class="b"></div>
+      <div class="b"></div>
+      <div class="b"></div>
+      <div class="b"></div>
+      <div class="b"></div>
+      <div class="b"></div>
+    </div>   
+
+</article>
+
 </div>
 <!-- content class end !-->
 
@@ -191,31 +388,31 @@
  
    
   <div class ="box">
-    <div class="fbox">box</div>
-    <div class="fbox">box</div>
-    <div class="fbox">box</div>
-    <div class="fbox">box</div>
+    <div class="fbox"></div>
+    <div class="fbox"></div>
+    <div class="fbox"></div>
+    <div class="fbox"></div>
   </div>
 
   <div class="box">
-   <div class="fbox">box</div>
-    <div class="fbox">box</div>
-    <div class="fbox">box</div>
-    <div class="fbox">box</div>
+   <div class="fbox"></div>
+    <div class="fbox"></div>
+    <div class="fbox"></div>
+    <div class="fbox"></div>
   </div>
 
   <div class="box">
-   <div class="fbox">box</div>
-    <div class="fbox">box</div>
-    <div class="fbox">box</div>
-    <div class="fbox">box</div>
+   <div class="fbox"></div>
+    <div class="fbox"></div>
+    <div class="fbox"></div>
+    <div class="fbox"></div>
  </div>
 
  <div class="box">
-   <div class="fbox">box</div>
-    <div class="fbox">box</div>
-    <div class="fbox">box</div>
-    <div class="fbox">box</div>
+   <div class="fbox"></div>
+    <div class="fbox"></div>
+    <div class="fbox"></div>
+    <div class="fbox"></div>
  </div>
 
 
